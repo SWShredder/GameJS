@@ -9,8 +9,8 @@ let playerPosY = 0;
 let maxVelocity = 8;
 let playerVelocityX = 0;
 let playerVelocityY = 0;
-let playerSpeed = 2;
-let dragForce = 0.5;
+let playerSpeed = 0.5;
+let dragForce = 0.1;
 
 function updateMovement() {
     updatePlayerVelocity();
@@ -21,11 +21,9 @@ function updatePlayerVelocity() {
     let keysMap = getKeysPressed();
     if (keysMap["W"]) {
         playerVelocityY += playerSpeed;
-        console.log("velocity y : " + playerVelocityY)
     }
     if (keysMap["S"]) {
         playerVelocityY -= playerSpeed;
-        console.log("velocity y : " + playerVelocityY)
     }
     if (keysMap["A"]) {
         playerVelocityX -= playerSpeed;
@@ -33,8 +31,9 @@ function updatePlayerVelocity() {
     if (keysMap["D"]) {
         playerVelocityX += playerSpeed;
     }
-    applyMaxVelocity();
     applyDrag();
+    applyMaxVelocity();
+
 }
 
 function applyMaxVelocity() {
@@ -79,4 +78,8 @@ function applyDrag() {
 
 function getPlayerPosition() {
     return [playerPosX, playerPosY];
+}
+
+function getPlayerVelocity() {
+    return [playerVelocityX, playerVelocityY];
 }

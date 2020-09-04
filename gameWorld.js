@@ -1,0 +1,4 @@
+class GameWorld {
+    gameObjects = [];
+    
+}

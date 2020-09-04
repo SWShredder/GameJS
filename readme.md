@@ -1,3 +1,3 @@
-#Yanik Sweeney
+#Yanik Sweeney#
 
-##Projet Personnel pour tenter de faire bouger des trucs avec javascript et le DOM
+#Projet Personnel pour tenter de faire bouger des trucs avec javascript et le DOM#
